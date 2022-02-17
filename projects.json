@@ -21,5 +21,13 @@
             "tech": "HTML, CSS/Sass, JavaScript",
             "github": "https://github.com/MauroBaJ/AppBarberia"
         }
+        ,
+        {
+            "name": "This Site",
+            "description": "The site You're currently on was made as a portfolio / CV for myself.",
+            "builtFor": "Myself",
+            "tech": "HTML, CSS/Sass, JavaScript",
+            "github": "https://github.com/MauroBaJ/maurobaj.github.io"
+        }
     ]
 }
