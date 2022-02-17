@@ -1,0 +1,25 @@
+{
+    "proyectos" : [
+        {
+            "name": "Persefone",
+            "description": "Online Store for sales of plants and gardening equipment",
+            "builtFor": "School",
+            "tech": "HTML, CSS/Sass, PHP, MySQL",
+            "github": "https://github.com/MauroBaJ/Persefone"
+        },
+        {
+            "name": "APS",
+            "description": "Online Store for a local shop in town, dedicated to sales of hydraulic products",
+            "builtFor": "School",
+            "tech": "HTML, CSS/Sass, React.JS, PHP, MySQL",
+            "github": "https://github.com/MauroBaJ/APS"
+        },
+        {
+            "name": "AppBarberia",
+            "description": "This was a little project made on a udemy course. It reads a barber shop's prices and makes appointments.",
+            "builtFor": "Udemy Course",
+            "tech": "HTML, CSS/Sass, JavaScript",
+            "github": "https://github.com/MauroBaJ/AppBarberia"
+        }
+    ]
+}
