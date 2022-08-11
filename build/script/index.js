@@ -15,7 +15,8 @@ buttonDarkMode.addEventListener( "click",()=>{
     buttonDarkMode.textContent=body.classList.contains("Dark")?"🌚":"🌞"
 });
 
-try {
+const solicitarProjectos = async () =>{
+    try {
     const res = await fetch('/projects.json');
     const p = await res.json()
     const { proyectos } = p;
@@ -64,6 +65,7 @@ try {
     });
 
 } catch (e) { console.log(e); }
+}
             
     solicitarProjectos();
     let date=new Date, thisYear=date.getFullYear();
