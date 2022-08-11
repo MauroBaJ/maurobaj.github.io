@@ -1,2 +1,72 @@
-let buttonDarkMode=document.getElementById("dm-toggle"),body=document.body,nameSection=document.querySelector(".name"),mainContent=document.querySelector("main"),educationSection=document.querySelector(".education"),projectsSection=document.querySelector(".projects");buttonDarkMode.addEventListener("click",()=>{body.classList.toggle("Dark"),nameSection.classList.toggle("Dark"),mainContent.classList.toggle("Dark"),educationSection.classList.toggle("Dark"),projectsSection.classList.toggle("Dark"),buttonDarkMode.classList.toggle("button-dark"),buttonDarkMode.textContent=body.classList.contains("Dark")?"🌚":"🌞"});const solicitarProjectos=async()=>{try{const e=await fetch("/projects.json"),t=await e.json(),{proyectos:o}=t,n=document.querySelector(".card-container");o.forEach(e=>{const t=document.createElement("div"),o=document.createElement("img"),c=document.createElement("h4"),a=document.createElement("p"),d=document.createElement("p"),r=document.createElement("p"),s=document.createElement("p"),i=document.createElement("a");t.classList.add("card"),o.classList.add("project_thumbnail"),c.classList.add("project_name"),a.classList.add("project_description"),d.classList.add("project_area"),r.classList.add("project_tech"),s.classList.add("project_link"),o.src=e.image,c.textContent=e.name,a.textContent=e.description,d.textContent="This project was built for: "+e.builtFor,r.textContent=e.tech,i.href=e.github,i.textContent="GitHub",t.appendChild(o),t.appendChild(c),t.appendChild(a),t.appendChild(d),t.appendChild(r),s.appendChild(i),t.appendChild(s),n.appendChild(t)})}catch(e){console.log(e)}};solicitarProjectos();let date=new Date,thisYear=date.getFullYear(),putYearHere=document.querySelector("#year");putYearHere.textContent=thisYear;
+let buttonDarkMode=document.getElementById("dm-toggle");
+let body=document.body;
+let nameSection=document.querySelector(".name");
+let mainContent=document.querySelector("main");
+let educationSection=document.querySelector(".education");
+let projectsSection=document.querySelector(".projects");
+
+buttonDarkMode.addEventListener( "click",()=>{
+    body.classList.toggle("Dark"),
+    nameSection.classList.toggle("Dark"),
+    mainContent.classList.toggle("Dark")
+    ,educationSection.classList.toggle("Dark"),
+    projectsSection.classList.toggle("Dark"),
+    buttonDarkMode.classList.toggle("button-dark"),
+    buttonDarkMode.textContent=body.classList.contains("Dark")?"🌚":"🌞"
+});
+
+try {
+    const res = await fetch('/projects.json');
+    const p = await res.json()
+    const { proyectos } = p;
+
+    const cardContainer = document.querySelector('.card-container')
+
+    proyectos.forEach(project => {
+        const card = document.createElement('div');
+        const image = document.createElement('img');
+        const name = document.createElement('h4');
+        const description = document.createElement('p')
+        const builtFor = document.createElement('p')
+        const tech = document.createElement('p')
+        const link = document.createElement('p')
+        const address = document.createElement('a')
+
+        card.classList.add('card');
+        image.classList.add('project_thumbnail');
+        name.classList.add('project_name');
+        description.classList.add('project_description');
+        builtFor.classList.add('project_area');
+        tech.classList.add('project_tech');
+        link.classList.add('project_link');
+
+        image.src = project.image;
+        name.textContent = project.name;
+        description.textContent = project.description;
+        builtFor.textContent = `This project was built for: ${project.builtFor}`;
+        tech.textContent = project.tech;
+        address.href = project.github;
+        address.textContent = "GitHub"
+
+
+
+        card.appendChild(image)
+        card.appendChild(name)
+        card.appendChild(description)
+        card.appendChild(builtFor)
+        card.appendChild(tech)
+
+        link.appendChild(address)
+        card.appendChild(link)
+
+        cardContainer.appendChild(card)
+
+    });
+
+} catch (e) { console.log(e); }
+            
+    solicitarProjectos();
+    let date=new Date, thisYear=date.getFullYear();
+    let putYearHere=document.querySelector("#year");
+    putYearHere.textContent=thisYear;
 //# sourceMappingURL=bundle.js.map
