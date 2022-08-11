@@ -15,8 +15,8 @@ html {
   box-sizing: inherit;
 }
 
-section:nth-child(odd){
-  border-radius: 2rem;
+section:nth-of-type(even){
+  border-radius: 5rem;
 }
 
 body {
