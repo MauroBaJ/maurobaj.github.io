@@ -15,6 +15,10 @@ html {
   box-sizing: inherit;
 }
 
+section:nth-child(odd){
+  border-radius: 2rem;
+}
+
 body {
   padding: 0;
   margin: 0;
