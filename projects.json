@@ -32,7 +32,7 @@
         ,
                 {
             "name": "Sproutr",
-            "description": "This was an IoT project, currently inactive to avoid AWS's recurrent charges. The objective was to display data from a DHT sensor and a Soil Moisture sensor into a web interface via IOT techniques. The repo listed has the interface, and not the driver code for the arduino or the backend.",
+            "description": "This was an IoT project, currently inactive to avoid AWS's recurrent charges. More info in the repo",
             "builtFor": "School",
             "tech": "HTML, CSS/Sass, JavaScript, React.JS, AWS IoT Core, AWS DynamoDB, NodeJS, C for Arduino, NodeMCU ESP8266",
             "github": "https://github.com/MauroBaJ/sproutr"
